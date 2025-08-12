@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Choco Boutique — Ремесленный шоколад</title>
+    <meta name="description" content="Ремесленный шоколад ручной работы: горький, молочный, белый и наборы. Доставка по городу, свежесть и качество гарантируем." />
+    <meta name="theme-color" content="#2c1a14" />
+
+    <meta property="og:title" content="Choco Boutique — Ремесленный шоколад" />
+    <meta property="og:description" content="Каталог лучших шоколадных изделий ручной работы. Попробуйте сейчас!" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' x='6' font-size='52'%3E%F0%9F%8D%AB%3C/text%3E%3C/svg%3E" />
+
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="Choco Boutique">Choco<span>Boutique</span></a>
+        <nav class="nav" aria-label="Главная навигация">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Меню</button>
+          <ul id="nav-menu" class="nav-menu">
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contact">Контакты</a></li>
+            <li>
+              <button id="cartButton" class="cart-button" aria-haspopup="dialog" aria-controls="cartPanel">
+                Корзина <span id="cartCount" class="badge">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Ремесленный шоколад, созданный с любовью</h1>
+            <p>Натуральные ингредиенты, честный состав и насыщенный вкус. Попробуйте нашу коллекцию — от классики до смелых начинок.</p>
+            <div class="hero-cta">
+              <a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
+              <a href="#about" class="btn btn-ghost">Узнать о нас</a>
+            </div>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <div class="hero-card">
+              <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=1600&auto=format&fit=crop" alt="Плитки темного шоколада" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" class="catalog section-gap">
+        <div class="container">
+          <header class="section-header">
+            <h2>Каталог</h2>
+            <p>Подберите вкус по настроению. Фильтруйте по категории или используйте поиск.</p>
+          </header>
+
+          <div class="catalog-controls">
+            <div class="filters" role="tablist" aria-label="Категории">
+              <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Все</button>
+              <button class="filter-btn" data-filter="dark" role="tab">Горький</button>
+              <button class="filter-btn" data-filter="milk" role="tab">Молочный</button>
+              <button class="filter-btn" data-filter="white" role="tab">Белый</button>
+              <button class="filter-btn" data-filter="filled" role="tab">Начинки</button>
+              <button class="filter-btn" data-filter="set" role="tab">Наборы</button>
+            </div>
+            <label class="search" aria-label="Поиск по каталогу">
+              <input id="searchInput" type="search" placeholder="Поиск: карамель, апельсин, фундук…" />
+              <span class="search-icon" aria-hidden="true">🔎</span>
+            </label>
+          </div>
+
+          <div id="productGrid" class="product-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="about" class="about section-gap">
+        <div class="container two-col">
+          <div class="about-text">
+            <h2>О нас</h2>
+            <p>Мы — небольшая мастерская шоколада в вашем городе. Каждая плитка создается вручную из какао-бобов высшего сорта с вниманием к деталям и вкусам.</p>
+            <ul class="benefits">
+              <li>Натуральные ингредиенты и честный состав</li>
+              <li>Свежесть каждой партии</li>
+              <li>Экологичная упаковка</li>
+            </ul>
+          </div>
+          <div class="about-media">
+            <img src="https://images.unsplash.com/photo-1593720219276-0caa6452e004?q=80&w=1600&auto=format&fit=crop" alt="Процесс приготовления шоколада" />
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="reviews section-gap">
+        <div class="container">
+          <header class="section-header">
+            <h2>Отзывы клиентов</h2>
+          </header>
+          <div class="review-grid">
+            <blockquote class="review">
+              <p>Лучший горький шоколад, что я пробовала. Чистый вкус какао и идеальная текстура.</p>
+              <cite>— Анна</cite>
+            </blockquote>
+            <blockquote class="review">
+              <p>Набор ассорти — идеальный подарок. Упаковка очень стильная!</p>
+              <cite>— Дмитрий</cite>
+            </blockquote>
+            <blockquote class="review">
+              <p>Молочный с фундуком просто космос. Доставка быстрая.</p>
+              <cite>— Мария</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section-gap">
+        <div class="container two-col">
+          <div class="contact-text">
+            <h2>Свяжитесь с нами</h2>
+            <p>Есть вопросы или особые пожелания? Напишите нам — мы поможем собрать идеальный набор.</p>
+            <ul class="contacts">
+              <li>Телефон: <a href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+              <li>Эл. почта: <a href="mailto:hello@chocoboutique.ru">hello@chocoboutique.ru</a></li>
+              <li>Instagram: <a href="https://instagram.com/" target="_blank" rel="noopener">@chocoboutique</a></li>
+            </ul>
+          </div>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input id="name" name="name" type="text" required placeholder="Ваше имя" />
+              <small class="error" data-for="name"></small>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="name@example.com" />
+              <small class="error" data-for="email"></small>
+            </div>
+            <div class="form-field">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" rows="4" required placeholder="Ваше сообщение"></textarea>
+              <small class="error" data-for="message"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+            <p class="form-note">Эта форма демонстрационная — сообщение не будет отправлено.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <aside id="cartPanel" class="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+      <div class="cart-backdrop" id="cartBackdrop" aria-hidden="true"></div>
+      <div class="cart-sheet" role="document">
+        <header class="cart-header">
+          <h3 id="cartTitle">Ваша корзина</h3>
+          <button id="closeCart" class="icon-btn" aria-label="Закрыть корзину">✕</button>
+        </header>
+        <div id="cartItems" class="cart-items" aria-live="polite"></div>
+        <footer class="cart-footer">
+          <div class="cart-summary">
+            <span>Итого:</span>
+            <strong id="cartTotal">0 ₽</strong>
+          </div>
+          <button id="checkoutBtn" class="btn btn-primary" disabled>Оформить заказ</button>
+        </footer>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Choco Boutique. Все права защищены.</p>
+        <nav class="footer-nav">
+          <a href="#top">Наверх</a>
+          <a href="#catalog">Каталог</a>
+          <a href="#contact">Контакты</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="./scripts/main.js" defer></script>
+  </body>
+</html>
